@@ -1,17 +1,12 @@
 from PIL import Image, ImageDraw, ImageFont
 import face_recognition
 import numpy as np
-import pickle
-import shutil
 import os
-import uvicorn
 
 import io
 from fastapi import FastAPI, File, Form, UploadFile
-from fastapi.encoders import jsonable_encoder
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import StreamingResponse
-from typing import List
 
 
 app = FastAPI()
@@ -87,4 +82,3 @@ async def faces_recognition(image_upload: UploadFile = File(...)):
 
 
 
-    

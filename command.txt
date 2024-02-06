@@ -1,0 +1,14 @@
+python -m virtualenv venv
+venv\scripts\activate
+
+pip install -r requirements.txt
+pip freeze > requirements.txt
+
+pip install fastapi pymysql uvicorn sqlalchemy
+
+--->  Run Command  <---
+uvicorn main:app --reload
+
+
+----> Ip Address Used <----
+uvicorn main:app --host 192.168.100.164 --port 8001 --reload
